@@ -39,6 +39,7 @@ async function onSearch(event) {
     const data = await fetchGallery(query, page);
 
     loaderTop.classList.add('hidden');
+    loaderBottom.classList.add('hidden');
 
     if (data.hits.length === 0) {
       iziToast.error({
