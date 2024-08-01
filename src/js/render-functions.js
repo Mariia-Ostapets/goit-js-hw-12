@@ -15,5 +15,5 @@ export function renderGallery(images) {
               </li>`;
     })
     .join('');
-  gallery.innerHTML = markup;
+  gallery.insertAdjacentHTML('beforeend', markup);
 }

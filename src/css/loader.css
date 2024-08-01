@@ -7,7 +7,8 @@
   }
 }
 
-#loader {
+#loader-top,
+#loader-bottom {
   border: 10px solid #f3f3f3;
   border-radius: 50%;
   border-top: 10px solid #3498db;
@@ -17,6 +18,7 @@
   margin: 0 auto;
 }
 
-#loader.hidden {
+#loader-top.hidden,
+#loader-bottom.hidden {
   display: none;
 }

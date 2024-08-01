@@ -38,7 +38,7 @@ body {
   color: #2e2f42;
 }
 
-.search-btn {
+button {
   font-family: inherit;
   display: block;
   border: none;
@@ -55,7 +55,7 @@ body {
   transition: background-color 250ms linear, color 250ms linear;
 }
 
-.search-btn:hover {
+button:hover {
   background-color: #6c8cff;
 }
 
@@ -106,4 +106,12 @@ body {
   line-height: 2;
   letter-spacing: 0.04em;
   color: #2e2f42;
+}
+
+.js-load-more-btn {
+  margin: 0 auto;
+}
+
+.js-load-more-btn.hidden {
+  display: none;
 }
