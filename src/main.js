@@ -54,7 +54,15 @@ async function onSearch(event) {
     simpleLightbox = new SimpleLightbox('.gallery a');
     simpleLightbox.refresh();
 
-    loadMoreBtn.classList.remove('hidden');
+    if (data.hits.length < 15) {
+      loadMoreBtn.classList.add('hidden');
+      iziToast.info({
+        message: "You've reached the end of search results.",
+        position: 'topRight',
+      });
+    } else {
+      loadMoreBtn.classList.remove('hidden');
+    }
 
     page += 1;
     currentQuery = query;
@@ -79,12 +87,11 @@ async function onLoadMore(event) {
 
     renderGallery(data.hits);
 
-    simpleLightbox = new SimpleLightbox('.gallery a');
     simpleLightbox.refresh();
 
     page += 1;
 
-    if (page * 15 >= data.totalHits) {
+    if (page * 15 >= data.totalHits || data.hits.length < 15) {
       loadMoreBtn.classList.add('hidden');
       iziToast.info({
         message: "We're sorry, but you've reached the end of search results.",
