@@ -1,6 +1,6 @@
 # Vanilla App Template
 
-**Search Images App. An app for searching images. Use Vite, HTTP request.**
+**Search Images App. An app for searching images. Use Vite, Axios.
 
 Цей проект було створено за допомогою Vite. Для знайомства та налаштування
 додаткових можливостей [звернись до документації](https://vitejs.dev/).
